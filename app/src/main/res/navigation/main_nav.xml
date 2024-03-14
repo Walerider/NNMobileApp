@@ -18,6 +18,6 @@
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.walerider.nnmobileapp.FavoritesFragment"
-        android:label="fragment_favorites2"
-        tools:layout="@layout/fragment_favorites2" />
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
 </navigation>

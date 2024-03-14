@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="@string/home_name"
-        android:icon="@drawable/ic_home"
-        android:id="@+id/homeFragment"/>
+        android:icon="@drawable/map_select"
+        android:id="@+id/homeFragment" />
     <item
         android:title="@string/favorite_name"
         android:icon="@drawable/ic_favorite"
