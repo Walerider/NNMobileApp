@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+    <!--android:background="@drawable/Enter"-->
+
+<!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/text1111"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/EnterButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_corner_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:letterSpacing="0.03"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:autoLink="web"
+        app:layout_constraintBottom_toBottomOf="@+id/text1111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.096"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"
+        app:layout_constraintWidth_percent="0.825" />
+
+    <EditText
+        android:id="@+id/PasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bordered_transparent_background"
+        android:drawableLeft="@drawable/Lock"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:letterSpacing="-0.04"
+        android:paddingStart="8dp"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text1111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.096"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555"
+        app:layout_constraintWidth_percent="0.825" />
+
+    <EditText
+        android:id="@+id/LoginEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bordered_transparent_background"
+        android:drawableLeft="@drawable/Account"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:hint="Логин"
+        android:inputType="text"
+        android:letterSpacing="-0.04"
+        android:paddingStart="8dp"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text1111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.096"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406"
+        app:layout_constraintWidth_percent="0.825" />
+
+    <TextView
+        android:id="@+id/NoAccountLabelTextView"
+        android:layout_width="352dp"
+        android:layout_height="33dp"
+        android:autoLink="web"
+        android:fontFamily="@font/montserrat_regular"
+        android:hint="Нет аккаунта?"
+        android:letterSpacing="-0.04"
+        android:text="Нет аккаунта? Зарегестрироваться!"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text1111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.096"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753"
+        app:layout_constraintWidth_percent="0.825" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/Group_5"
+        app:layout_constraintBottom_toTopOf="@+id/LoginEditText"
+        app:layout_constraintEnd_toEndOf="@+id/LoginEditText"
+        app:layout_constraintHeight_percent="0.19"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/LoginEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761"
+        app:layout_constraintWidth_percent="0.750" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
