@@ -66,7 +66,6 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
     }
 
-    // TODO: 14.03.2024 сделать точки
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
 

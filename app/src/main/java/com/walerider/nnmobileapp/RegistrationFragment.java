@@ -46,8 +46,6 @@ public class RegistrationFragment extends Fragment {
 
     }
 
-    // TODO: 20.03.2024 Забить хуй на нижнюю навигацию и доделать карту и збс
-    // TODO: 20.03.2024 сделать добавление точки в фавориты(хз как)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
