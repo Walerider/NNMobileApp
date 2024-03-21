@@ -71,7 +71,8 @@ public class RegistrationFragment extends Fragment {
                 if(!query.moveToFirst()){
                     writeToFile(String.valueOf(fullNameEditText.getText()),getContext(),"login");
                     checkLogin();
-                    activity.setLogin(query.getString(0));
+                    activity.setLogin(regLoginEditText.getText().toString());
+                    db.execSQL("INSERT INTO users VALUES('" + regLoginEditText.getText() + "','" + fullNameEditText.getText() +"','" + regPasswordEditText.getText() + "');");
                     navController.navigate(R.id.profileFragment);
                 }else{
                     regLoginEditText.setError("Пользователь с таким логином уже существует");

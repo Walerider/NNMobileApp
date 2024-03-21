@@ -56,8 +56,6 @@ public class FavoritesFragment extends Fragment {
                 NavHostFragment navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
                 NavController navController = navHostFragment.getNavController();
                 Bundle bundle = new Bundle();
-                Log.d("COORD",favoriteItem.getCoordinates().split(",")[0]);
-                Log.d("COORD",favoriteItem.getCoordinates().split(",")[1]);
                 bundle.putDouble("latitudePos", Double.parseDouble(favoriteItem.getCoordinates().split(",")[0]));
                 bundle.putDouble("longitudePos", Double.parseDouble(favoriteItem.getCoordinates().split(",")[1]));
                 navController.navigate(R.id.homeFragment,bundle);

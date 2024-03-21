@@ -67,10 +67,15 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("CREATE TABLE IF NOT EXISTS users_favorites(user_login TEXT, favorite_title TEXT, " +
                 "FOREIGN KEY (user_login) REFERENCES users(login), FOREIGN KEY (favorite_title) REFERENCES positions(title))");
         db.execSQL("INSERT OR IGNORE INTO users VALUES('Walerider','Нелюбин Ярослав Садаевич','Password');");
+        db.execSQL("INSERT OR IGNORE INTO users_favorites VALUES ('Walerider','Собор Александра Невского'), ('Walerider','Ижевский государственный технический университет имени М. Т. Калашникова');");
         db.execSQL("INSERT OR IGNORE INTO positions VALUES('Собор Александра Невского','56.844068,53.200970','улица Максима Горького, 66',"
         + Integer.toString(R.drawable.sobor) + ");");
         db.execSQL("INSERT OR IGNORE INTO positions VALUES('Кафедральный собор Архангела Михаила','56.849569,53.205296','улица Карла Маркса, 222'," +
                 Integer.toString(R.drawable.caf_sobor_archangela) + ");");
+        db.execSQL("INSERT OR IGNORE INTO positions VALUES('Государственный зоологический парк Удмуртии','56.865361,53.174488','улица Кирова, 8'," +
+                Integer.toString(R.drawable.zoo) + ");");
+        db.execSQL("INSERT OR IGNORE INTO positions VALUES('Ижевский государственный технический университет имени М. Т. Калашникова','56.871179,53.174995'," +
+                "'Студенческая улица, 7'," + Integer.toString(R.drawable.istu) + ");");
         /*db.execSQL("CREATE TABLE IF NOT EXISTS feedbacks(title TEXT,user_login TEXT,valuation INTEGER," +
                 "FOREIGN KEY(title) REFERENCES positions(title), FOREIGN KEY (user_login) REFERENCES users(login))");*/
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);

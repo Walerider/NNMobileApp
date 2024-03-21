@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
     }
 
-    // TODO: 14.03.2024 сделать точки 
+    // TODO: 14.03.2024 сделать точки
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
 
@@ -90,6 +90,7 @@ public class HomeFragment extends Fragment {
         if(getArguments() != null){
             posLatitude = getArguments().getDouble("latitudePos");
             posLongtitude = getArguments().getDouble("longitudePos");
+            getArguments().clear();
         }
         Cursor query = db.rawQuery("SELECT * FROM positions",null);
         while (query.moveToNext()){

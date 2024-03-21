@@ -59,12 +59,12 @@ public class PositionFragment extends Fragment {
             if(!activity.isLogin()){
                 Toast.makeText(getContext(),"Войдите в аккаунт, чтобы добавлять избранное",Toast.LENGTH_LONG).show();
             }else{
-                // TODO: 21.03.2024 вот здесь поправить избранное
                 Cursor checkQuery = db.rawQuery("SELECT * FROM users_favorites WHERE user_login = '" + activity.getLogin() + "' AND favorite_title = '"
                 + dataSplit[0] + "';",null);
                 if(!checkQuery.moveToFirst()){
                     db.execSQL("INSERT OR IGNORE INTO users_favorites VALUES('" + activity.getLogin() +"','" + dataSplit[0] + "');");
                 }
+
             }
         });
         return view;
