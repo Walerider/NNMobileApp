@@ -2,13 +2,23 @@ package com.walerider.nnmobileapp;
 
 public class FavoriteItem {
     private int mainImage;
+    private String coordinates;
     private String title;
     private String address;
 
-    public FavoriteItem(int mainImage, String title, String address) {
+    public FavoriteItem(int mainImage, String coordinates, String title, String address) {
         this.mainImage = mainImage;
+        this.coordinates = coordinates;
         this.title = title;
         this.address = address;
+    }
+
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
     }
 
     public int getMainImage() {

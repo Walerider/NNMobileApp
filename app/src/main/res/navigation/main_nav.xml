@@ -20,4 +20,12 @@
         android:name="com.walerider.nnmobileapp.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="com.walerider.nnmobileapp.EnterFragment"
+        android:label="EnterFragment" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.walerider.nnmobileapp.RegistrationFragment"
+        android:label="RegistrationFragment" />
 </navigation>
