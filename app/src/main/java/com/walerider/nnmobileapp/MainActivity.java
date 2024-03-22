@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("CREATE TABLE IF NOT EXISTS positions(title TEXT PRIMARY KEY,coordinates TEXT,address TEXT,photo INTEGER)");
         db.execSQL("CREATE TABLE IF NOT EXISTS users_favorites(user_login TEXT, favorite_title TEXT, " +
                 "FOREIGN KEY (user_login) REFERENCES users(login), FOREIGN KEY (favorite_title) REFERENCES positions(title))");
-        db.execSQL("INSERT OR IGNORE INTO users VALUES('Walerider','Нелюбин Ярослав Садаевич','Password');");
-        db.execSQL("INSERT OR IGNORE INTO users_favorites VALUES ('Walerider','Собор Александра Невского'), ('Walerider','Ижевский государственный технический университет имени М. Т. Калашникова');");
+        Cursor q1 = db.rawQuery("SELECT * FROM users_favorites WHERE user_login='Walerider'",null);
+        Cursor q2 = db.rawQuery("SELECT * FROM users WHERE login='Walerider'",null);
+        if(!q2.moveToFirst()){db.execSQL("INSERT OR IGNORE INTO users VALUES('Walerider','Нелюбин Ярослав Садаевич','Password');");}
+        if(!q1.moveToFirst()){db.execSQL("INSERT OR IGNORE INTO users_favorites VALUES ('Walerider','Собор Александра Невского'), ('Walerider','Ижевский государственный технический университет имени М. Т. Калашникова');");}
         db.execSQL("INSERT OR IGNORE INTO positions VALUES('Собор Александра Невского','56.844068,53.200970','улица Максима Горького, 66',"
         + Integer.toString(R.drawable.sobor) + ");");
         db.execSQL("INSERT OR IGNORE INTO positions VALUES('Кафедральный собор Архангела Михаила','56.849569,53.205296','улица Карла Маркса, 222'," +
