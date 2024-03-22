@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         checkLogin();
+
         NavController navController = navHostFragment.getNavController();
         Log.e("1", String.valueOf(NavigationUI.onNavDestinationSelected(bottomNavigationView.getMenu().getItem(0), navController)));
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
